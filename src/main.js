@@ -54,18 +54,20 @@ let CurrentPlanetIdx = 1;
 let IsAnimating = false
 
 const LoadManager = new THREE.LoadingManager(() => {
-  gsap.to('.loader',{
-    opacity:0,
-    onComplete(){
-      gsap.to('.loader',{
-        display:'none'
-      })
-    }
-  })
 }, (_,n,t) => {
   const Prog = Math.round(n / t * 100)
   let StrProg = Prog < 10 ? '0' + Prog + '%' : Prog + '%' 
   document.querySelector('.loader p').innerHTML = StrProg
+  if(Prog == 100) {
+    gsap.to('.loader',{
+      opacity:0,
+      onComplete(){
+        gsap.to('.loader',{
+          display:'none'
+        })
+      }
+    })
+  }
 }, () => {
   
 })
