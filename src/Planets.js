@@ -1,0 +1,26 @@
+export const PlanetsData = [
+    {
+        name:'Venus',
+        r:1.3,
+        map:'/venus/map.jpg',
+        clouds:null
+    },
+    {
+        name:'Earth',
+        r:1.5,
+        map:'/earth/map.jpg',
+        clouds:'/earth/clouds.jpg'
+    },
+    {
+        name:'Csilla',
+        r:1.5,
+        map:'/csilla/color.jpg',
+        clouds:'/csilla/clouds.jpg'
+    },
+    {
+        name:'Volcanic',
+        r:1.3,
+        map:'/volcanic/color.jpg',
+        clouds:null
+    },
+]
