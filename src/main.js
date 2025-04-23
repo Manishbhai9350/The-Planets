@@ -48,10 +48,6 @@ Planets.position.y = -0.3;
 let ThetaDX = (Math.PI * 2) / PlanetsData.length;
 let Radius = 5.5;
 
-const Loader = new THREE.TextureLoader();
-
-let CurrentPlanetIdx = 1;
-let IsAnimating = false
 
 const LoadManager = new THREE.LoadingManager(() => {
 }, (_,n,t) => {
@@ -71,6 +67,12 @@ const LoadManager = new THREE.LoadingManager(() => {
 }, () => {
   
 })
+
+
+const Loader = new THREE.TextureLoader(LoadManager);
+
+let CurrentPlanetIdx = 1;
+let IsAnimating = false
 
 
 function ShowInfo(i){
